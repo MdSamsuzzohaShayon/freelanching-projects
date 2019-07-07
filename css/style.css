@@ -14,6 +14,9 @@
 .clients {
     padding: 50px 0px 50px 0px;
 }
+.client-heading{
+    font-family: "Open Sans", sans-serif !important;
+}
 
 .blue {
     color: #003a78;
@@ -141,12 +144,23 @@
 
 
 
-.name, .email, .phone, .text{
+.name, .email, .phone, .text, .btn-bg{
     border: none;
-    width: 100% !important;
+    width: 60% !important;
+    padding: 10px 0;
 }
 .btn-bg{
     background: #003a78 !important;
+}
+form.h1text{
+    font-size: 0.9rem !important;
+}
+
+
+@media (max-width: 410px){
+    .name, .email, .phone, .text, .btn-bg{
+        width: 80% !important;
+    }
 }
 
 
