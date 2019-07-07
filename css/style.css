@@ -1,3 +1,10 @@
+.headerLogo{
+    /* padding-top: -50px !important; */
+    /* margin-top: -30px; */
+    /* margin-bottom: 20px; */
+    /* z-index: 0; */
+}
+
 .explorSec{
     /* margin-bottom: 0 !important; */
     padding-bottom: 0 !important;
@@ -9,7 +16,7 @@
 }
 
 .blue {
-    color: #225470;
+    color: #003a78;
     text-align: center;
 }
 
@@ -129,15 +136,40 @@
 /* SLICK ENDS */
 
 
+
+
+
+
+
+.name, .email, .phone, .text{
+    border: none;
+    width: 100% !important;
+}
+.btn-bg{
+    background: #003a78 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* CLIENTS ENDS */
 
-
+footer{
+    color: white;
+}
 .footer p {
     font-size: 0.8rem;
 }
 
 .footer a {
-    color: rgb(5, 143, 235);
+    color: white;
 }
 
 .social {
@@ -145,7 +177,7 @@
     width: 40px !important;
     height: 40px !important;
     display: inline-block;
-    color: black !important;
+    color: white !important;
     border-radius: 50%;
     background: #058feb;
 }

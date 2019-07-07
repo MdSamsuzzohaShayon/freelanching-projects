@@ -8330,17 +8330,17 @@ a.text-dark:hover {
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none
+    -webkit-touch-callout: none;
 }
 
 .owl-carousel .owl-item img {
     display: block;
-    width: 100%
+    width: 100%;
 }
 
 .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
-    display: none
+    display: none;
 }
 
 .owl-carousel .owl-dot,
@@ -8351,7 +8351,7 @@ a.text-dark:hover {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
 }
 
 .owl-carousel .owl-nav button.owl-next,
@@ -9378,26 +9378,26 @@ svg {
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .active .sld .h2text span {
-    transform: matrix(1, 0, 0, 1, 0, 0) !important
+    transform: matrix(1, 0, 0, 1, 0, 0) !important;
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .active .a {
-    opacity: 1
+    opacity: 1;
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .active .a .pg_btn {
-    transform: matrix(1, 0, 0, 1, 0, 0) !important
+    transform: matrix(1, 0, 0, 1, 0, 0) !important;
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .owl-dots {
     display: inline-block;
     position: absolute;
     bottom: 65px;
-    right: 190px
+    right: 190px;
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .owl-dots .owl-dot {
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .bannerSec .bnrSlider .bnrheadSlid .owl-dots .owl-dot span {
@@ -9548,7 +9548,7 @@ svg {
 @media only screen and (max-width:1439px) {
     .explorSec {
         margin-top: 80px;
-        padding-top: 80px
+        padding-top: 80px;
     }
 }
 
@@ -12367,7 +12367,7 @@ header nav.navbar .navbarLogo .headerLogo {
     width: 64px;
     height: 40px;
     margin-right: 15px;
-    display: inline-block
+    display: inline-block;
 }
 
 @media only screen and (max-width:479px) {
@@ -13290,12 +13290,12 @@ footer .btmFootr p a:hover {
         text-align: center;
         width: 100% !important;
         right: inherit !important;
-        bottom: 0 !important
+        bottom: 0 !important;
     }
 
     .bannerSec .bnrSlider .bnrheadSlid .owl-dots .owl-dot {
         margin-left: 5px;
-        margin-right: 5px
+        margin-right: 5px;
     }
 
     .bannerSec .homebanner .bannerImage .bnrImagediv {
@@ -13372,11 +13372,11 @@ footer .btmFootr p a:hover {
         bottom: 0;
         right: inherit;
         text-align: center;
-        display: none
+        display: none;
     }
 
     .bannerSec .homebanner .bnrSlider .owl-dots {
-        bottom: -35px !important
+        bottom: -35px !important;
     }
 
     header .navbar {
@@ -13384,7 +13384,7 @@ footer .btmFootr p a:hover {
         right: 0;
         top: 0;
         width: 100%;
-        z-index: 1
+        z-index: 1;
     }
 
     header .navbar nav {
@@ -14159,26 +14159,26 @@ footer .btmFootr p a:hover {
 
 @media (max-width:479px) and (max-width:991px) {
     .applySec .formDiv {
-        padding-top: 40px !important
+        padding-top: 40px !important ;
     }
 }
 
 @media (max-width:479px) {
     .bannerSec .owl-nav {
-        display: none
+        display: none ;
     }
 
     .bannerSec .bnrSlider .bnrheadSlid .owl-dots {
-        bottom: 0 !important
+        bottom: 0 !important ;
     }
 
     .designBoxes span:nth-of-type(3) {
         width: 30px;
-        height: 30px
+        height: 30px ;
     }
 
     .designBoxes span:nth-of-type(2) {
-        font-size: 34px
+        font-size: 34px ;
     }
 }
 
@@ -14436,28 +14436,28 @@ footer .btmFootr p a:hover {
 
 @media (max-width:479px) {
     .careerDetailBnr {
-        padding-bottom: 240px !important
+        padding-bottom: 240px !important;
     }
 }
 
 @media (max-width:767px) {
     .owl-nav {
-        display: none
+        display: none;
     }
 }
 
 @media (max-width:767px) {
     .owl-dots {
-        padding-top: 25px
+        padding-top: 25px;
     }
 }
 
 .jbDis ul li {
-    line-height: 30px
+    line-height: 30px;
 }
 
 .jobDesSec .prosessText {
-    line-height: 34px
+    line-height: 34px;
 }
 
 @media (max-width:991px) {

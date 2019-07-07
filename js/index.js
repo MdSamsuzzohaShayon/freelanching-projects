@@ -59,3 +59,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
   $("#navbarDropdown").attr("data-toggle", "dropdown");
   $("#navbarDropdown1").attr("data-toggle", "dropdown");
 }
+
+
+
+
+
+
+
+
+
