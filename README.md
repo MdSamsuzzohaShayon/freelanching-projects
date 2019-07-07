@@ -1,3 +1,3 @@
 # Front-end project
 
-[**Live preview**](https://mdsamsuzzohashayon.github.io/upwork-projects/)
+[<button>Live preview </button>](https://mdsamsuzzohashayon.github.io/upwork-projects/)
