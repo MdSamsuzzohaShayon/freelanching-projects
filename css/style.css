@@ -1,11 +1,11 @@
-.headerLogo{
+.headerLogo {
     /* padding-top: -50px !important; */
     /* margin-top: -30px; */
     /* margin-bottom: 20px; */
     /* z-index: 0; */
 }
 
-.explorSec{
+.explorSec {
     /* margin-bottom: 0 !important; */
     padding-bottom: 0 !important;
 }
@@ -14,7 +14,8 @@
 .clients {
     padding: 50px 0px 50px 0px;
 }
-.client-heading{
+
+.client-heading {
     font-family: "Open Sans", sans-serif !important;
 }
 
@@ -144,21 +145,32 @@
 
 
 
-.name, .email, .phone, .text, .btn-bg{
+.name,
+.email,
+.phone,
+.text,
+.btn-bg {
     border: none;
     width: 60% !important;
     padding: 10px 0;
 }
-.btn-bg{
+
+.btn-bg {
     background: #003a78 !important;
 }
-form.h1text{
+
+form.h1text {
     font-size: 0.9rem !important;
 }
 
 
-@media (max-width: 410px){
-    .name, .email, .phone, .text, .btn-bg{
+@media (max-width: 410px) {
+
+    .name,
+    .email,
+    .phone,
+    .text,
+    .btn-bg {
         width: 80% !important;
     }
 }
@@ -175,9 +187,10 @@ form.h1text{
 
 /* CLIENTS ENDS */
 
-footer{
+footer {
     color: white;
 }
+
 .footer p {
     font-size: 0.8rem;
 }
@@ -204,4 +217,106 @@ footer{
 .in:hover {
     color: white !important;
     background: rgb(47, 65, 230);
+}
+
+
+
+
+
+
+/* TRANSLATION SERCIVES PAGE */
+.languages_header {
+    /* margin: 60px 0px 0px 0px; */
+    background-image: url("../img/lang_bg.jpg");
+    box-shadow: inset 0 0 0 2000px rgba(57, 85, 111, 0.8);
+}
+
+.lang_header_sec1 {
+    /* margin: 0px 0px 60px 0px; */
+    color: #ffffff;
+    padding-top: 30px;
+}
+
+.lang_title {
+    /* margin-top: 0.5rem; */
+    font-size: 1.5rem !important;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+.flag {
+    width: 50px;
+}
+
+.lang_section {
+    /* margin: 100px 0px 100px 0px; */
+}
+
+.header_lang .form-group {
+    margin-bottom: 0.2rem !important;
+}
+
+.check_bulltes {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.check_bulltes li:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00c';
+    margin: 0 10px 0 -15px;
+    color: #fff;
+}
+
+.check_bulltes_why {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.check_bulltes_why li:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00c';
+    margin: 0 10px 0 -15px;
+    color: #225470;
+}
+
+.about_check_bulltes {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.about_check_bulltes li:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00c';
+    /* margin: 0 10px 0 -15px; */
+    color: #225470;
+}
+
+.why_row {
+    /* margin-top: 3rem; */
+}
+
+.form_div {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2)
+}
+
+.contact_us_sec {
+    text-align: center;
+    /* margin: 5rem 0; */
+}
+
+.about_us_content h2 {
+    /* margin: 5rem 0 2rem 0; */
+}
+
+.about_us_content {
+    text-align: left;
 }
