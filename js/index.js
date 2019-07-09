@@ -65,6 +65,13 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
 
 
+// HIGHT SETUP FOR TRANSLATION PAGE
+// const translation_languages_header = document.getElementById('lan_head');
+// if(window.innerWidth > 412){
+//   translation_languages_header.style.height = '90vh';
+// }
 
-
+// if(window.innerWidth < 412){
+//   translation_languages_header.style.height = '100%';
+// }
 
