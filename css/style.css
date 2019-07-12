@@ -537,6 +537,13 @@ footer a:hover {
  border-radius: 50%;
    height: 10px; 
 } */
+.brd-lft {
+    font-size: calc((1 *(1em - 13px) - -2em - 10px));
+    line-height: 1;
+    letter-spacing: 0;
+    margin-bottom: 38px;
+    font-weight: 600;
+} 
 
 
 
@@ -545,7 +552,7 @@ footer a:hover {
     .brd-lft {
         border-left: #bcccdd solid 3px;
         /* letter-spacing: 10px; */
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     } 
 }
 
