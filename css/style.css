@@ -3,14 +3,35 @@
     padding-bottom: 0 !important;
 }
 
-/* CLIENTS START */
-.clients {
-    padding: 50px 0px 50px 0px;
-}
 
-.client-heading {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CLIENTS START */
+/* .clients {
+    padding: 50px 0px 50px 0px;
+} */
+
+/* .client-heading {
     font-family: "Open Sans", sans-serif !important;
-}
+} */
+
 
 .match-color {
     /* color: #003a78; */
@@ -21,8 +42,9 @@
 
 .blue {
     color: #003a78;
-    text-align: center;
 }
+
+
 
 /* SLICK START */
 .slick-slide {
@@ -140,11 +162,6 @@
 /* SLICK ENDS */
 
 
-
-
-
-
-
 .name,
 .email,
 .phone,
@@ -163,8 +180,14 @@ form.h1text {
     font-size: 0.9rem !important;
 }
 
+.clients .beforeLine::after {
+    left: 43% !important;
+    width: 160px;
+}
 
-@media (max-width: 410px) {
+@media screen and(min-width: 710px) {}
+
+@media (max-width: 420px) {
 
     .name,
     .email,
@@ -173,9 +196,31 @@ form.h1text {
     .btn-bg {
         width: 80% !important;
     }
+
+    .clients .beforeLine::after {
+        left: 0 !important;
+        width: 60px;
+    }
+
 }
 
 /* CLIENTS ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -277,6 +322,22 @@ form.h1text {
 
 
 /* LANDING ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -438,34 +499,65 @@ form.h1text {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* FOOTER STYLE */
 footer {
+    color: #bcccdd;
+}
+
+footer a {
+    color: #bcccdd !important;
+}
+
+footer a:hover {
     color: white;
 }
 
-.footer p {
-    font-size: 0.8rem;
+
+.subfooter ul li {
+    margin-bottom: 10px;
 }
 
-.footer a {
+.cpy-rt{
+    margin-top: 60px !important;
+    font-size: .7rem;
+}
+/* .scl-icon{
+    background: #fdb811;
+    padding: 5px 10px;
+ border-radius: 50%;
+   height: 10px; 
+} */
+
+
+
+
+@media(min-width: 710px) {
+    .brd-lft {
+        border-left: #bcccdd solid 3px;
+        /* letter-spacing: 10px; */
+        margin-bottom: 30px;
+    } 
+}
+
+@media(max-width: 420px) {
+    .brd-lft {
+        border-left: none;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+}
+
+
+/* footer, footer a:hover{
     color: white;
-}
-
-.social {
-    padding-top: 9px;
-    width: 40px !important;
-    height: 40px !important;
-    display: inline-block;
-    color: white !important;
-    border-radius: 50%;
-    background: #058feb;
-}
-
-.fb:hover {
-    color: white !important;
-    background: rgb(12, 1, 160);
-}
-
-.in:hover {
-    color: white !important;
-    background: rgb(47, 65, 230);
-}
+} */

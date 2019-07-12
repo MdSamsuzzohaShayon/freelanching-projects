@@ -12746,6 +12746,7 @@ footer {
 }
 
 footer .subfooter {
+    font-family: "Open Sans", "sans-serif";
     padding-top: 107px;
     padding-bottom: 63px;
     text-align: center;
@@ -12755,7 +12756,7 @@ footer .subfooter {
 @media only screen and (max-width:1359px) {
     footer .subfooter {
         padding-top: 60px;
-        padding-bottom: 50px
+        padding-bottom: 50px;
     }
 }
 
@@ -12763,7 +12764,7 @@ footer .subfooter .ftlogo {
     width: 88px;
     height: 55px;
     display: inline-block;
-    margin-bottom: 47px
+    margin-bottom: 47px;
 }
 
 footer .subfooter .fterh2 {
@@ -12796,7 +12797,7 @@ footer .subfooter .pg_btn::after {
 
 footer .mainFooter {
     padding-top: 83px;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
     text-align: center
 }
 
@@ -12862,7 +12863,7 @@ footer .mainFooter .footnav li:hover a {
 }
 
 footer .mainFooter .followDiv {
-    width: 220px;
+    width: 350px;
     max-height: 100%;
     margin: 0 auto
 }
@@ -12991,7 +12992,8 @@ footer .btmFootr p a:hover {
 }
 
 .beforeLine {
-    position: relative
+    position: relative;
+
 }
 
 .beforeLine::after {
@@ -13001,12 +13003,12 @@ footer .btmFootr p a:hover {
     left: 0;
     height: 5px;
     width: 34px;
-    background-color: #fdb811
+    background-color: #fdb811;
 }
 
 @media only screen and (max-width:1439px) {
     .beforeLine::after {
-        bottom: -30px
+        bottom: -30px;
     }
 }
 
