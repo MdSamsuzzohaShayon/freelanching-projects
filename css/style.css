@@ -1,6 +1,7 @@
-.explorSec {
+.clients .explorSec {
     /* margin-bottom: 0 !important; */
     padding-bottom: 0 !important;
+    /* background: #003a78; */
 }
 
 
@@ -24,13 +25,13 @@
 
 
 /* CLIENTS START */
-/* .clients {
+.clients {
     padding: 50px 0px 50px 0px;
-} */
+}
 
-/* .client-heading {
+.client-heading {
     font-family: "Open Sans", sans-serif !important;
-} */
+}
 
 
 .match-color {
@@ -181,11 +182,10 @@ form.h1text {
 }
 
 .clients .beforeLine::after {
-    left: 43% !important;
-    width: 160px;
+    left: 49% !important;
+    width: 34px;
 }
 
-@media screen and(min-width: 710px) {}
 
 @media (max-width: 420px) {
 
@@ -199,12 +199,29 @@ form.h1text {
 
     .clients .beforeLine::after {
         left: 0 !important;
-        width: 60px;
+        width: 34px;
     }
 
 }
 
 /* CLIENTS ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Home Page */
+.exser{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px;
+}
 
 
 
@@ -230,6 +247,11 @@ form.h1text {
 /* TRANSLATION SERCIVES PAGE */
 
 /* LANDING START */
+.t-services .explorSec{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 50%;
+}
 .languages_header {
     margin: 60px 0px 0px 0px;
     /* height: 90vh; */
@@ -474,15 +496,15 @@ form.h1text {
 
 
 /* services start */
-#services h3 {
-    font-size: 1.6rem;
-    color: #003a78;
+.services h3 {
+    /* font-size: 1.6rem; */
+    /* color: #003a78; */
 }
 
 #what-we-do .card {
     width: 380px;
-    height: 200px;
-    padding: 30px 20px 20px 20px;
+    height: 150px;
+    padding: 10px 10px 20px 20px;
 }
 
 #what-we-do .card:hover {
