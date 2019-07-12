@@ -77,4 +77,28 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
 
 
+const circle_from_process_of_t_service = document.getElementsByClassName('tl-circ');
+const menu = document.getElementsByClassName('menuDiv');
+const lan_head = document.getElementById('lan_head');
 
+
+// if(circle_from_process_of_t_service)
+// circle_from_process_of_t_service[1].scrollHeight
+
+
+
+// console.log(window.);
+
+
+for (let i = 0; i < circle_from_process_of_t_service.length; i++) {
+  console.log(circle_from_process_of_t_service[i].offSetTop);  
+}
+
+
+// circle_from_process_of_t_service.forEach((circle) => {
+//   if (event.deltaY)
+// })
+
+
+
+console.log(circle_from_process_of_t_service.length);
