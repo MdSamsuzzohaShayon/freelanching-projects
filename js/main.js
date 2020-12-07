@@ -24,6 +24,7 @@ const skip = document.getElementById("skip");
 console.log("skip :", skip);
 
 const promptBox = document.getElementById('prompt');
+const finalResult = document.getElementById("final-result");
 
 const date = document.getElementById("date");
 console.log("Date :", date);
@@ -110,8 +111,7 @@ if (addElement == true) {
             if (currentTopic >= lifeTopic.length - 2) {
                 // BLOCK SOME AREA AND SHOW FINAL DISPLAY 
                 promptBox.style.display = "none";
-
-
+                finalResult.style.display = "block";
                 // MAKE BIGGER CHART 
                 console.log("no more questuon");
             }
@@ -239,6 +239,9 @@ function drawGraph() {
     // //Rename the "bar" according to your component
     // if (window.myChart != undefined)window.myChart.destroy();
     // window.myChart = new Chart(ctx, {});
+
+
+    
 }
 
 
