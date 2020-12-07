@@ -23,6 +23,8 @@ const lifeTopic = document.querySelectorAll(".life-topic");
 const skip = document.getElementById("skip");
 console.log("skip :", skip);
 
+const promptBox = document.getElementById('prompt');
+
 const date = document.getElementById("date");
 console.log("Date :", date);
 
@@ -54,8 +56,8 @@ let data = [];
 let bgColors = [];
 let borderColors = [];
 // COLOR ARRAY FOR ONE DIRRERENT DATA AND LEVEL 
-let colorArray = ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+let colorArray = ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.4)', 'rgba(255, 206, 86, 0.4)', ' rgba(0, 170, 23, 0.4)', 'rgba(153, 102, 255, 0.4)',
+    'rgba(255, 128, 0, 0.4)', 'color: rgba(0, 51, 85, 0.4);', '#52522862', '#99FF99', '#B34D4D',
     '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
     '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
     '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC',
@@ -85,6 +87,8 @@ skip.addEventListener("click", e => {
     addElement = false;
 });
 
+
+
 if (addElement == true) {
     mark.forEach((m, index) => {
 
@@ -103,30 +107,35 @@ if (addElement == true) {
 
             console.log("Current: ", currentTopic);
             lifeTopic[currentTopic].style.display = 'none';
-            if (currentTopic >= lifeTopic.length - 1) {
+            if (currentTopic >= lifeTopic.length - 2) {
                 // BLOCK SOME AREA AND SHOW FINAL DISPLAY 
+                promptBox.style.display = "none";
+
+
                 // MAKE BIGGER CHART 
                 console.log("no more questuon");
-            } else {
-
-                // CHECK WHICH TOPIC WE ARE ON 
-                console.log("Current life topic question : ", lifeTopic[currentTopic].textContent);
-                // ADD THIS LIFE TOPIC TO GRAPH LABEL 
-                labels.push(lifeTopic[currentTopic].textContent);
-                console.log("labels array: ", labels);
-                // ADD VALUE OF LIFE TOPIC TO DATA 
-                data.push(markValue);
-                console.log("data array: ", data);
-                bgColors.push(colorArray[currentTopic]);
-                console.log("bg color of array: ", colorArray[currentTopic]);
-                bgColors.push(colorArray[currentTopic]);
-                console.log("border color of array: ", colorArray[currentTopic]);
-                drawGraph();
-
-                currentTopic++;
-                lifeTopic[currentTopic].style.display = 'block';
             }
-        })
+
+            // CHECK WHICH TOPIC WE ARE ON 
+            console.log("Current life topic question : ", lifeTopic[currentTopic].textContent);
+            // ADD THIS LIFE TOPIC TO GRAPH LABEL 
+            labels.push(lifeTopic[currentTopic].textContent);
+            console.log("labels array: ", labels);
+            // ADD VALUE OF LIFE TOPIC TO DATA 
+            data.push(markValue);
+            console.log("data array: ", data);
+            console.log("bg color of array: ", colorArray[currentTopic]);
+            bgColors.push(colorArray[currentTopic]);
+            console.log("Background colors array: ", bgColors);
+            console.log("border color of array: ", colorArray[currentTopic]);
+            // ARRAY INVERT 
+            // borderColors.push(colorArray.reverse()[currentTopic]);
+            // console.log("border colors array: ", borderColors);
+            drawGraph();
+
+            currentTopic++;
+            lifeTopic[currentTopic].style.display = 'block';
+        });
         // console.log(m.childNodes[0].textContent);
     });
 }
@@ -177,14 +186,16 @@ function drawGraph() {
                     //     'rgba(255, 159, 64, 0.2)'
                     // ]
                     ,
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
+                    borderColor: bgColors
+                    // [
+                    //     'rgba(255, 99, 132, 1)',
+                    //     'rgba(54, 162, 235, 1)',
+                    //     'rgba(255, 206, 86, 1)',
+                    //     'rgba(75, 192, 192, 1)',
+                    //     'rgba(153, 102, 255, 1)',
+                    //     'rgba(255, 159, 64, 1)'
+                    // ]
+                    ,
                     borderWidth: 1
                 }
 
@@ -192,10 +203,10 @@ function drawGraph() {
         },
         options: {
             legend: {
-                display: true,
-                labels: {
-                    fontColor: 'rgb(255, 99, 132)'
-                }
+                display: false,
+                // labels: {
+                //     fontColor: 'rgb(255, 99, 132)'
+                // }
             },
             scale: {
                 // ticks: {
@@ -224,6 +235,10 @@ function drawGraph() {
             responsive: false
         }
     });
+    //Destroy the previous chart;
+    // //Rename the "bar" according to your component
+    // if (window.myChart != undefined)window.myChart.destroy();
+    // window.myChart = new Chart(ctx, {});
 }
 
 
