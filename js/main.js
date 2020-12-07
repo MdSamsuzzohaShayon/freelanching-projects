@@ -16,6 +16,8 @@
 // console.log("money: ", money);
 // console.log("fun: ", fun);
 // console.log("friends: ", friends);
+
+
 // let lifeTopic = [health, career, love, spirituality, family, money, fun, friends];
 let lifeTopic =  document.querySelectorAll(".life-topic");
 
