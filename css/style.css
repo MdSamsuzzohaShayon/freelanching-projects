@@ -1,8 +1,4 @@
-body{
-    padding: 0 !important;
-    margin: 0 !important;
-}
-#final-result{
+#button-box, #final-result{
     display: none;
 }
 .life-wheel{

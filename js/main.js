@@ -33,6 +33,11 @@ const date = document.getElementById("date");
 
 
 const wheelOfLife = document.getElementById("wheel-of-life");
+const btnBox = document.getElementById("button-box");
+const download = document.getElementById("download");
+const reload = document.getElementById("reload");
+
+
 
 
 // DISPLAY LIFE TOPIC ONE BY ONE 
@@ -116,12 +121,14 @@ if (addElement == true) {
             if (currentTopic >= lifeTopic.length - 2) {
                 // BLOCK SOME AREA AND SHOW FINAL DISPLAY 
                 promptBox.style.display = "none";
+                btnBox.style.display = 'block';
                 finalResult.style.display = "block";
                 // MAKE BIGGER CHART 
                 console.log("no more questuon");
+                download.addEventListener('click', e=> convertHtmlToPDF());
                 // ELEMENT THAT ARE CHANGING IN THE GRAPH 
                 console.log("All data final output: ", { data, labels, bgColors });
-                convertHtmlToPDF();
+                
             }
 
             // CHECK WHICH TOPIC WE ARE ON 
@@ -150,6 +157,9 @@ if (addElement == true) {
         // console.log(m.childNodes[0].textContent);
     });
 }
+reload.addEventListener('click', e=>{
+    location.reload();
+});
 
 
 
