@@ -308,7 +308,7 @@ function convertHtmlToPDF() {
 
     // TAKING SCREENSHOT OF CANVAS 
     const screenshot=async () =>{
-        const doc = new jsPDF();
+        const doc = new jsPDF('p', 'pt', 'letter');
         // html2canvas(myChart).then((canvas) => {
         //     // document.body.appendChild(canvas);
         //     let imgData = canvas.toDataURL('image/png');
@@ -322,11 +322,11 @@ function convertHtmlToPDF() {
 
 
         // ADD IMAGE AND FROM HTML DOES NOT WORK TOGETHER 
-        // doc.fromHTML(wheelOfLife, 15, 15);
+        doc.fromHTML(wheelOfLife, 200, 25);
 
         doc.setFontSize(40);
-        doc.text(35, 25, 'My Wheel of Life');
-        doc.addImage(imgData, "PNG", 15, 15);
+        // doc.text(35, 25, 'My Wheel of Life');
+        doc.addImage(imgData, "PNG", 75, 120); // TOP POSITION AND LEFT POSITION
 
         // doc.addPage();
         doc.save("life-of-wheel.pdf");
