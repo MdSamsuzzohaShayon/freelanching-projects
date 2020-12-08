@@ -21,18 +21,21 @@
 // let lifeTopic = [health, career, love, spirituality, family, money, fun, friends];
 const lifeTopic = document.querySelectorAll(".life-topic");
 const skip = document.getElementById("skip");
-console.log("skip :", skip);
+// console.log("skip :", skip);
 
 const promptBox = document.getElementById('prompt');
 const finalResult = document.getElementById("final-result");
 
 const date = document.getElementById("date");
-console.log("Date :", date);
+// console.log("Date :", date);
+
+
+const wheelOfLife = document.getElementById("wheel-of-life");
 
 
 // DISPLAY LIFE TOPIC ONE BY ONE 
 
-console.log("Life topic: ", lifeTopic.length);
+// console.log("Life topic: ", lifeTopic.length);
 let currentTopic = 0;
 // MAKE DISPLAY NONE FOR ALL OF THEM 
 lifeTopic.forEach(lt => lt.style.display = "none");
@@ -45,7 +48,7 @@ lifeTopic[currentTopic].style.display = 'block';
 
 // ADD EVENT LISTENER FOR ALL MARK 1 TO 10 AND EXTRACTING THE VALUE 
 const mark = document.querySelectorAll(".mark");
-console.log("Mark :", mark);
+// console.log("Mark :", mark);
 
 
 
@@ -83,7 +86,7 @@ skip.addEventListener("click", e => {
     e.preventDefault();
     lifeTopic[currentTopic].style.display = 'none';
     currentTopic++;
-    console.log("Current: ", currentTopic);
+    // console.log("Current: ", currentTopic);
     lifeTopic[currentTopic].style.display = 'block';
     addElement = false;
 });
@@ -93,17 +96,17 @@ skip.addEventListener("click", e => {
 if (addElement == true) {
     mark.forEach((m, index) => {
 
-        console.log("index of mark: ", index);
+        // console.log("index of mark: ", index);
         m.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log("index of mark: ", index);
+            // console.log("index of mark: ", index);
             // console.log("event value: ", e.target.childNodes[0].textContent);
             const markValue = e.target.childNodes[0].textContent;
-            console.log("mark value: ", markValue);
+            // console.log("mark value: ", markValue);
             // if(markValue == 2){
             //     console.log("Mark value is 2");
             // }
-            console.log("life topic: ", lifeTopic.length);
+            // console.log("life topic: ", lifeTopic.length);
 
 
             console.log("Current: ", currentTopic);
@@ -114,23 +117,29 @@ if (addElement == true) {
                 finalResult.style.display = "block";
                 // MAKE BIGGER CHART 
                 console.log("no more questuon");
+                // ELEMENT THAT ARE CHANGING IN THE GRAPH 
+                console.log("All data final output: ", { data, labels, bgColors });
+                convertHtmlToPDF();
             }
 
             // CHECK WHICH TOPIC WE ARE ON 
-            console.log("Current life topic question : ", lifeTopic[currentTopic].textContent);
+            // console.log("Current life topic question : ", lifeTopic[currentTopic].textContent);
             // ADD THIS LIFE TOPIC TO GRAPH LABEL 
             labels.push(lifeTopic[currentTopic].textContent);
-            console.log("labels array: ", labels);
+            // console.log("labels array: ", labels);
             // ADD VALUE OF LIFE TOPIC TO DATA 
             data.push(markValue);
-            console.log("data array: ", data);
-            console.log("bg color of array: ", colorArray[currentTopic]);
+            // console.log("data array: ", data);
+            // console.log("bg color of array: ", colorArray[currentTopic]);
             bgColors.push(colorArray[currentTopic]);
-            console.log("Background colors array: ", bgColors);
-            console.log("border color of array: ", colorArray[currentTopic]);
+            // console.log("Background colors array: ", bgColors);
+            // console.log("border color of array: ", colorArray[currentTopic]);
             // ARRAY INVERT 
             // borderColors.push(colorArray.reverse()[currentTopic]);
             // console.log("border colors array: ", borderColors);
+
+
+
             drawGraph();
 
             currentTopic++;
@@ -241,10 +250,92 @@ function drawGraph() {
     // window.myChart = new Chart(ctx, {});
 
 
-    
+
 }
 
 
 
 
-// CHART JS POLAR AREA CHART START 
+// CHART JS POLAR AREA CHART ENDS
+
+
+
+// HTML TO PDF USING JAVASCRIPT 
+// https://www.youtube.com/watch?v=0bSI9OgYcpQ&t=8s
+function convertHtmlToPDF() {
+    
+    /*
+    // FAILED TRY 
+    let doc = new jsPDF(
+        {
+            orientation: "letter",
+            // unit: "in",
+            // format: [4, 2]
+        }
+    );
+    // let elmentHTML = wheelOfLife.html();
+    // let specialElementHandlers = {}
+
+
+    doc.html(wheelOfLife, {
+        callback: function (pdf) {
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:500px');
+            document.body.appendChild(iframe);
+            iframe.src = pdf.output('datauristring');
+        }
+    })
+    // doc.advancedAPI(doc => {
+    //     // your code
+    // });
+
+    // doc.save("two-by-four.pdf");
+    */
+
+
+     // IE does not support outerHTML on SVGElement
+     if (typeof SVGElement === 'object' && !SVGElement.prototype.outerHTML) {
+        Object.defineProperty(SVGElement.prototype, 'outerHTML', {
+            get: function () {
+                var $node, $temp;
+                $temp = document.createElement('div');
+                $node = this.cloneNode(true);
+                $temp.appendChild($node);
+                return $temp.innerHTML;
+            },
+            enumerable: false,
+            configurable: true
+        });
+    }
+
+    window.onload = function () {
+        doRefresh();
+    };
+
+    var doRefresh = function () {
+        var makePdf = function () {
+            var pdf = new jsPDF('p', 'pt', 'c1');
+            var c = pdf.canvas;
+            c.width = 1000;
+            c.height = 500;
+
+            var ctx = c.getContext('2d');
+            ctx.ignoreClearRect = true;
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 1000, 700);
+
+            //load a svg snippet in the canvas with id = 'drawingArea'
+            canvg(c, document.getElementById('svg').outerHTML, {
+                ignoreMouse: true,
+                ignoreAnimation: true,
+                ignoreDimensions: true
+            });
+
+            return pdf;
+        };
+        document.getElementById('result').setAttribute('src', makePdf().output('dataurlstring'));
+        document.getElementById('source').innerText = makePdf().output();
+        //makePdf().save();
+    };
+    doRefresh();
+}
