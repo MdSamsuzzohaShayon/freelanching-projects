@@ -293,49 +293,11 @@ function convertHtmlToPDF() {
     */
 
 
-     // IE does not support outerHTML on SVGElement
-     if (typeof SVGElement === 'object' && !SVGElement.prototype.outerHTML) {
-        Object.defineProperty(SVGElement.prototype, 'outerHTML', {
-            get: function () {
-                var $node, $temp;
-                $temp = document.createElement('div');
-                $node = this.cloneNode(true);
-                $temp.appendChild($node);
-                return $temp.innerHTML;
-            },
-            enumerable: false,
-            configurable: true
-        });
-    }
 
-    window.onload = function () {
-        doRefresh();
-    };
 
-    var doRefresh = function () {
-        var makePdf = function () {
-            var pdf = new jsPDF('p', 'pt', 'c1');
-            var c = pdf.canvas;
-            c.width = 1000;
-            c.height = 500;
 
-            var ctx = c.getContext('2d');
-            ctx.ignoreClearRect = true;
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(0, 0, 1000, 700);
-
-            //load a svg snippet in the canvas with id = 'drawingArea'
-            canvg(c, document.getElementById('svg').outerHTML, {
-                ignoreMouse: true,
-                ignoreAnimation: true,
-                ignoreDimensions: true
-            });
-
-            return pdf;
-        };
-        document.getElementById('result').setAttribute('src', makePdf().output('dataurlstring'));
-        document.getElementById('source').innerText = makePdf().output();
-        //makePdf().save();
-    };
-    doRefresh();
+    const doc = new jsPDF();
+    let html2pdf = wheelOfLife;
+    doc.fromHTML(html2pdf, 15, 15)
+    doc.save();
 }
