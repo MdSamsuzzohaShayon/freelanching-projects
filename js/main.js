@@ -63,7 +63,7 @@ let bgColors = [];
 let borderColors = [];
 // COLOR ARRAY FOR ONE DIRRERENT DATA AND LEVEL 
 let colorArray = ['rgba(255, 99, 132, 0.4)', 'rgba(54, 162, 235, 0.4)', 'rgba(255, 206, 86, 0.4)', ' rgba(0, 170, 23, 0.4)', 'rgba(153, 102, 255, 0.4)',
-    'rgba(255, 128, 0, 0.4)', 'color: rgba(0, 51, 85, 0.4);', '#52522862', '#99FF99', '#B34D4D',
+    'rgba(255, 128, 0, 0.4)', 'rgba(0, 51, 85, 0.4)', 'rgba(85, 0, 0, 0.4)', 'rgba(85, 0, 52, 0.4)', '#B34D4D',
     '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
     '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
     '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC',
@@ -243,7 +243,7 @@ function drawGraph() {
             //         }
             //     }]
             // },
-            responsive: false
+            responsive: true
         }
     });
     //Destroy the previous chart;
@@ -315,7 +315,7 @@ function convertHtmlToPDF() {
         // doc.fromHTML(wheelOfLife, 15, 15);
 
         doc.setFontSize(40);
-        doc.text(35, 25, 'Paranyan loves jsPDF');
+        doc.text(35, 25, 'My Wheel of Life');
         doc.addImage(imgData, "PNG", 15, 15);
 
         // doc.addPage();

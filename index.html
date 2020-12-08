@@ -11,7 +11,7 @@
 
 <body>
     <!-- NAVBAR START  -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,12 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
     <!-- NAVBAR ENDS  -->
+    <br><br>
     <div class="container text-center" >
+
         <!-- PROMPT STRAT -->
         <div id="prompt">
             <div id="life-topic-box">
@@ -65,7 +63,7 @@
 
             </div>
             <h5>How would you rate this area of your life?</h5>
-            <nav aria-label="Page navigation example">
+            <nav class="d-flex justify-content-center" aria-label="Page navigation example">
                 <ul class="pagination">
                     <li class="page-item mark "><a class="page-link" href="#">1</a></li>
                     <li class="page-item mark "><a class="page-link" href="#">2</a></li>
@@ -85,18 +83,24 @@
 
 
 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
 
 
         <!-- WHEEL START  -->
-        <div class="life-wheel" id="wheel-of-life">
+        <div class="life-wheel d-flex justify-content-center text-secondary" id="wheel-of-life">
 
             <div id="final-result">
                 <h1>My Wheel of Life</h1>
                 <h4 id="date">December 07 2020</h4>
             </div>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas id="myChart" ></canvas>
         </div>
         <!-- WHEEL ENDS  -->
     </div>

@@ -1,3 +1,7 @@
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 #final-result{
     display: none;
 }
@@ -5,3 +9,17 @@
     pointer-events:none
 }
 /* .life-wheel:hover{color:red;} */
+
+#wheel-of-life{
+    width: 600px;
+}
+
+@media(max-width: 768px){
+    #wheel-of-life{
+        width: 400px;
+    }
+    /* .pagination{
+        width: 70%;
+        margin-left: 15%;
+    } */
+}
