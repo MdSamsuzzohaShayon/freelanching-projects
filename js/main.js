@@ -18,6 +18,8 @@
 // console.log("friends: ", friends);
 
 
+const myChart = document.getElementById('myChart');
+
 // let lifeTopic = [health, career, love, spirituality, family, money, fun, friends];
 const lifeTopic = document.querySelectorAll(".life-topic");
 const skip = document.getElementById("skip");
@@ -263,7 +265,7 @@ function drawGraph() {
 // HTML TO PDF USING JAVASCRIPT 
 // https://www.youtube.com/watch?v=0bSI9OgYcpQ&t=8s
 function convertHtmlToPDF() {
-    
+
     /*
     // FAILED TRY 
     let doc = new jsPDF(
@@ -294,10 +296,35 @@ function convertHtmlToPDF() {
 
 
 
+    // TAKING SCREENSHOT OF CANVAS 
+    const screenshot=async () =>{
+        const doc = new jsPDF();
+        // html2canvas(myChart).then((canvas) => {
+        //     // document.body.appendChild(canvas);
+        //     let imgData = canvas.toDataURL('image/png');
+        //     // let html2pdf = wheelOfLife;
+        //     doc.fromHTML(wheelOfLife, 15, 15);
+        //     doc.addImage(imgData, "PNG", 10, 10);
+        //     doc.save("life-of-wheel.pdf");
+        // });
+        const canvas = await html2canvas(myChart);
+        const imgData = canvas.toDataURL('image/png');
 
 
-    const doc = new jsPDF();
-    let html2pdf = wheelOfLife;
-    doc.fromHTML(html2pdf, 15, 15)
-    doc.save();
+        // ADD IMAGE AND FROM HTML DOES NOT WORK TOGETHER 
+        // doc.fromHTML(wheelOfLife, 15, 15);
+
+        doc.setFontSize(40);
+        doc.text(35, 25, 'Paranyan loves jsPDF');
+        doc.addImage(imgData, "PNG", 15, 15);
+
+        // doc.addPage();
+        doc.save("life-of-wheel.pdf");
+    }
+    screenshot();
+
+
+
+
+
 }
