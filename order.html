@@ -79,7 +79,7 @@
                     <div class="dot dot-6"></div>
                 </div> -->
             </div>
-            <div class="pro-bar-overlay"></div>
+            <div class="pro-bar-overlay" id="pro-bar-progress"></div>
             <div class="pro-bar-text ">
                 <div class="d-flex justify-content-between">
                     <div class="dot-text">Property Info</div>
@@ -95,7 +95,8 @@
 
         <!-- ORDER STEP START  -->
         <div class="order-step-info mt-5">
-            <!-- <div class="step step-1">
+            <!-- PROPERTY INFO START  -->
+            <div class="step step-1 property">
                 <h4 class="h4">Where Do You Want Us to Fly?</h4>
                 <form>
                     <label class="label">Address or Latitude / Longitude</label>
@@ -126,11 +127,14 @@
                         <input type="text" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-primary px-5 next" type="submit">Next</button>
+                        <button class="btn btn-primary px-5 next-step" type="submit">Next</button>
                     </div>
                 </form>
-            </div> -->
-            <div class="step step-2">
+            </div>
+            <!-- PROPERTY INFO ENDS  -->
+
+            <!-- SELECT PACKAGE START  -->
+            <div class="step select-package step-2">
                 <h4 class="h4">Select Your Package</h4>
                 <P>DroneBase selects the most applicable shot list based on the property type and chosen package.</P>
                 <!-- PACKAGE START  -->
@@ -270,18 +274,110 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-primary next-step" data-bs-dismiss="modal" >Save changes</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- MODAL ENDS  -->
             </div>
+            <!-- SELECT PACKAGE ENDS  -->
 
-            <div class="step step-3">
-                
+
+            <!-- SITE DETAILS START  -->
+            <div class="step site-details step-3">
+                <h4 class="h4">Tell us where you want us to fly on the map.</h4>
+                <p>Drag the corners of the Property Area box to completely surround an individual building. This shows
+                    the pilot exactly which building or a plot of land to shoot. To add another property area simply
+                    click at the Property Area tool again.</p>
+
+                <br>
+                <div class="gmap-mark">
+                    <img src="img/pexels-binyamin-mellish-1396132.jpg" alt="" class="img-fluid">
+                </div>
+                <br>
+                <button class="btn btn-primary px-5 next-step">Next</button>
             </div>
+            <!-- SITE DETAILS ENDS  -->
 
+
+            <!-- SCHEDULING START  -->
+            <div class="step sheduling step-4">
+
+                <form action="">
+                    <div class="weather-pref">
+                        <h4 class="h4">Do you have a weather preference?</h4>
+                        <p>Please note that your weather preference may affect scheduled dates and turnaround time.</p>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Second default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="option3" disabled>
+                            <label class="form-check-label" for="exampleRadios3">
+                                Disabled radio
+                            </label>
+                        </div>
+                    </div>
+                    <div class="shedule-set">
+                        <h4 class="h4">On-site Contact</h4>
+                        <p>Please note that your weather preference may affect scheduled dates and turnaround time.</p>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Second default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                value="option3" disabled>
+                            <label class="form-check-label" for="exampleRadios3">
+                                Disabled radio
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary next-step px-5" type="submit">Next</button>
+                </form>
+            </div>
+            <!-- SCHEDULING ENDS  -->
+
+
+
+            <!-- PAYMENTS START  -->
+            <div class="step step-5 payments">
+                <h4 class="h4">Payments</h4>
+                <button class="btn btn-primary next-step px-5">Next</button>
+            </div>
+            <!-- PAYMENTS ENDS  -->
+
+
+            <!-- SUMMARY START  -->
+            <div class="step step-6 Summary">
+                <h4 class="h4">Summary</h4>
+                <button class="btn btn-primary next-step px-5" type="submit">Next</button>
+            </div>
+            <!-- SUMMARY ENDS  -->
 
         </div>
         <!-- ORDER STEP ENDS  -->
