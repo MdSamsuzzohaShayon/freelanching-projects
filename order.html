@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshot</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+    <nav class="navbar py-3 nav-over-video navbar-dark bg-dark navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <div class="d-flex">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary">Become a client</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR ENDS  -->
+
+
+
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- PROGRESS BAR START  -->
+        <div class="order-progress">
+            <div class="pro-bar">
+                <div class="dots base-dot d-flex justify-content-between">
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                    <div class="dot dot-4"></div>
+                    <div class="dot dot-5"></div>
+                    <div class="dot dot-6"></div>
+                </div>
+                <!-- <div class="dots dot-overlay d-flex justify-content-between">
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                    <div class="dot dot-4"></div>
+                    <div class="dot dot-5"></div>
+                    <div class="dot dot-6"></div>
+                </div> -->
+            </div>
+            <div class="pro-bar-overlay"></div>
+            <div class="pro-bar-text ">
+                <div class="d-flex justify-content-between">
+                    <div class="dot-text">Property Info</div>
+                    <div class="dot-text">Select Package</div>
+                    <div class="dot-text">Site details</div>
+                    <div class="dot-text">Shuduling</div>
+                    <div class="dot-text">Payment</div>
+                    <div class="dot-text">Summary</div>
+                </div>
+            </div>
+        </div>
+        <!-- PROGRASSBAR ENDS  -->
+
+        <!-- ORDER STEP START  -->
+        <div class="order-step-info mt-5">
+            <!-- <div class="step step-1">
+                <h4 class="h4">Where Do You Want Us to Fly?</h4>
+                <form>
+                    <label class="label">Address or Latitude / Longitude</label>
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" placeholder="Enter Location"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary px-5" type="submit" id="button-addon2">Next</button>
+                    </div>
+                </form>
+                <p class="muted">(e.g. 1234 Pico Blvd, Santa Monica, CA 90404; or 34.015096, -118.477445)</p>
+                <div class="row google-map">
+                    <div class="col-md-6">
+                        <div class="google-map-img">
+                            <img src="img/pexels-binyamin-mellish-106399.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="h4">Dhaka, Dhaka Division</h4>
+                        <p>(23.810332, 90.4125181)</p>
+                    </div>
+                </div>
+                <br>
+                <h4 class="h4">A reference or claim number for your internal use?</h4>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Reference ID (optional)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary px-5 next" type="submit">Next</button>
+                    </div>
+                </form>
+            </div> -->
+            <div class="step step-2">
+                <h4 class="h4">Select Your Package</h4>
+                <P>DroneBase selects the most applicable shot list based on the property type and chosen package.</P>
+                <!-- PACKAGE START  -->
+                <div class="package">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
+                                            mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>10 users included</li>
+                                        <li>2 GB of storage</li>
+                                        <li>Email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                        for
+                                        free</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
+                                            mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>10 users included</li>
+                                        <li>2 GB of storage</li>
+                                        <li>Email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                        for
+                                        free</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
+                                            mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>10 users included</li>
+                                        <li>2 GB of storage</li>
+                                        <li>Email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                        for
+                                        free</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
+                                            mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>10 users included</li>
+                                        <li>2 GB of storage</li>
+                                        <li>Email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                        for
+                                        free</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PACKAGE ENDS  -->
+
+                <br>
+                <h4 class="h4">Special Instructions</h4>
+                <p>Is there anything else you would like us to know for this order?</p>
+                <form>
+                    <div class="input-group mb-3">
+                        <textarea name="" id="" class="form-control" rows="2"></textarea>
+                    </div>
+                    <button class="btn btn-primary next px-4" type="submit">Next</button>
+                </form>
+
+                <!-- MODAL START  -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create an account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="row g-3 mb-3">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name"
+                                                aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name"
+                                                aria-label="Last name">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Company">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Email Address">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MODAL ENDS  -->
+            </div>
+
+            <div class="step step-3">
+                
+            </div>
+
+
+        </div>
+        <!-- ORDER STEP ENDS  -->
+    </div>
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
