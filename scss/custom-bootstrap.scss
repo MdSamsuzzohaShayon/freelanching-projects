@@ -1,10 +1,92 @@
+@import "./fonts";
+
 // VARIABLE OVERRIDE 
-$primary: green;
+$btn-border-radius: 0;
+$btn-border-width: none;
+$btn-padding-y: 0.8rem;
+$btn-padding-x: 3rem;
+
+
+$primary: rgb(31, 50, 104);
+
+
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0.05em;
+$dropdown-border-color: rgb(177, 177, 255);
+
+
+$input-bg: rgb(188, 203, 243) !default;
+$input-border-radius: 0;
+
+
+
+
+
+
+
+
+.dropdown-menu{
+    font-family: 'Peddana', serif;
+    font-size: 1rem !important;
+    @include font-styling(('Peddana', serif), 1rem !important);
+}
+
+
+
+.navbar {
+    // font-family: 'Peddana', serif;
+    // font-size: 1.2rem;
+    @include font-styling(('Peddana', serif), 1.2rem !important);
+}
+.btn{
+    border: none !important;
+}
+
+
+
+
+
+
+
+.form-control {
+// font size 
+    // color: $input-color;
+    // background-color: $input-bg;
+    background-clip: padding-box !important;
+    border: none !important;
+    
+  
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+    //   background-color: $input-focus-bg;
+    //   border-color: $input-focus-border-color;
+      outline: 0 !important;
+    }
+  
+  }
+
+  input[type="submit"]:focus {
+    outline: none !important;
+    background-color: rgb(208, 192, 74);
+}
+
+
+
+
+
+
 
 
 
 
 
 // Required
-@import "../bootstrap/scss/bootstrap.scss"
+@import "../bootstrap/scss/bootstrap.scss" ;
+
+
+// UTILITIES API 
+
+
+
+@import "./style";
 

@@ -7,7 +7,12 @@
     <title>Photoshot</title>
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/custom-bootstrap.css">
+    <!--load all styles -->
     <link rel="stylesheet" href="css/style.css">
+    <!--load all styles -->
+
+    <link rel="stylesheet" href="wow/css/libs/animate.css" />
+
 
 </head>
 
@@ -17,25 +22,55 @@
         <video autoplay muted loop class="video-bg" id="myVideo">
             <source src="video/showcase.mp4" type="video/mp4">
         </video>
+        
+        <!-- <div class="wow slideInDown" data-wow-duration="1s" data-wow-delay="0s" ></div> -->
         <!-- NAVBAR START -->
-        <nav class="navbar py-3 nav-over-video navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <div class="d-flex">
+        <nav class="navbar py-3 py-4 text-uppercase nav-over-video navbar-expand-lg navbar-white bg-white wow slideInDown"  data-wow-delay="0s" >
+            <div class="container-fluid d-flex">
+                <div class="justify-content-start">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" height="50px" alt="" class="img">
+                    </a>
+                </div>
+                <div class="justify-content-end">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-13z" />
+                                <path
+                                    d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm10.823.323l-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </span>
                     </button>
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">Industries</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">Pricing</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">Solutions</a>
+                            </li>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">Pilots</a>
+                            </li>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link active" aria-current="page" href="#">Support</a>
+                            </li>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                                <a class="nav-link" href="#">Log in</a>
+                            </li>
+                            <li class="nav-item wow flipInX   data-wow-duration="1s" data-wow-delay="1s"dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
@@ -43,18 +78,17 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s"><button class="btn btn-primary">Become a client</button></li>
                         </ul>
-                        <button class="btn btn-primary">Become a client</button>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- As a link -->
         <!-- NAVBAR ENDS  -->
 
 
@@ -62,9 +96,9 @@
         <!-- DESCRIPTIONS OF THE SITE START  -->
         <div class="site-description text-white d-flex flex-column position-relative">
             <div class="flex-wrapper text-center align-self-center justify-content-center">
-                <h2 class="h2">Real Estate Drone Photography &amp; Videography Services</h2>
-                <p>Showcase your home from the sky at the fraction of the cost and time.</p>
-                <button class="btn btn-primary price-btn">View Price</button>
+                <h2 class="wow bounceIn h2" data-wow-duration="1s" data-wow-delay="0.5s">Real Estate Drone Photography &amp; Videography Services</h2>
+                <p class="wow bounceIn" data-wow-duration="1s" data-wow-delay="1s" >Showcase your home from the sky at the fraction of the cost and time.</p>
+                <button class="btn  btn-primary btn-primary-plain  price-btn wow bounceIn" data-wow-duration="1s" data-wow-delay="1.5s">View Price</button>
             </div>
         </div>
         <!-- DESCRIPTION OF THE SITE ENDS  -->
@@ -76,8 +110,8 @@
     <!-- RESEDENTIAL REAL ESTATE START  -->
     <div class="d-flex flex-column res-re">
         <div class="container res-con text-center align-self-center justify-content-center">
-            <h2 class="h2">Residential Real Estate</h2>
-            <p>Our professional drone services provide stunning aerial footage including images, video, and panoramas to
+            <h2 class="wow bounceIn h2" data-wow-duration="1s" data-wow-delay="0.5s">Residential Real Estate</h2>
+            <p class="wow bounceIn " data-wow-duration="1s" data-wow-delay="1s">Our professional drone services provide stunning aerial footage including images, video, and panoramas to
                 showcase your residential property from a unique perspective in the sky. Perfect for showing the
                 surrounding neighborhood, viewing large properties, and providing context to nearby amenities and
                 features. DroneBase offers fast and professional aerial photography services at competitive pricing that
@@ -92,33 +126,33 @@
     <div class="container">
         <div class="d-flex flex-column">
             <div class="text-center align-self-center justify-content-center mt-5">
-                <h2 class="h2">Sell Your Listings Faster and Attract More Clients with Aerial Imagery</h2>
+                <h2 class="wow bounceIn h2" data-wow-duration="1s" data-wow-delay="0.5s">Sell Your Listings Faster and Attract More Clients with Aerial Imagery</h2>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-md-8">
-                <img src="img/pexels-binyamin-mellish-106399.jpg" alt="" class="img-fluid">
+                <img src="img/pexels-binyamin-mellish-106399.jpg" alt="" class="img-fluid wow slideInLeft">
             </div>
             <div class="col-md-4">
                 <div class="row mb-3">
-                    <img src="img/pexels-binyamin-mellish-1396132.jpg" alt="" class="img-fluid two-img">
+                    <img src="img/pexels-binyamin-mellish-1396132.jpg" alt="" class="img-fluid two-img wow slideInRight">
                 </div>
                 <div class="row mt-3">
-                    <img src="img/pexels-david-mcbee-1546168.jpg" alt="" class="img-fluid two-img">
+                    <img src="img/pexels-david-mcbee-1546168.jpg" alt="" class="img-fluid two-img wow slideInRight">
                 </div>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-md-4">
                 <div class="row mb-3">
-                    <img src="img/pexels-expect-best-323780.jpg" alt="" class="img-fluid two-img">
+                    <img src="img/pexels-expect-best-323780.jpg" alt="" class="img-fluid two-img wow slideInRight">
                 </div>
                 <div class="row mt-3">
-                    <img src="img/pexels-naim-benjelloun-2029665.jpg" alt="" class="img-fluid two-img">
+                    <img src="img/pexels-naim-benjelloun-2029665.jpg" alt="" class="img-fluid two-img wow slideInRight">
                 </div>
             </div>
             <div class="col-md-8">
-                <img src="img/pexels-naim-benjelloun-2029694.jpg" alt="" class="img-fluid">
+                <img src="img/pexels-naim-benjelloun-2029694.jpg" alt="" class="img-fluid wow slideInLeft">
             </div>
         </div>
     </div>
@@ -130,8 +164,8 @@
     <div class="package">
         <div class="d-flex flex-column">
             <div class="text-center container res-con aligh-self-center justify-content center mt-5">
-                <h2 class="h2">Residential Real Estate Pricing</h2>
-                <p>All our real estate drone photography packages include up to one hour of flight time on site. The
+                <h2 class="wow bounceIn h2" data-wow-duration="1s" data-wow-delay="0.5s" >Residential Real Estate Pricing</h2>
+                <p class="wow bounceIn" data-wow-duration="1s" data-wow-delay="1s" >All our real estate drone photography packages include up to one hour of flight time on site. The
                     flight will occur as soon as possible, dependent on the weather and your preference for faster
                     turnaround time or clear skies. Imagery hosting is included in all packages at no extra charge.</p>
             </div>
@@ -139,11 +173,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
+                    <div class="card mb-4 box-shadow wow pulse">
+                        <div class="card-header wow fadeInUp " data-wow-delay="0.5s">
                             <h4 class="my-0 font-weight-normal">Free</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body wow fadeInUp" data-wow-delay="0.5s" >
                             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>10 users included</li>
@@ -157,11 +191,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
+                    <div class="card mb-4 box-shadow  wow pulse" >
+                        <div class="card-header  wow fadeInUp " data-wow-delay="0.5s">
                             <h4 class="my-0 font-weight-normal">Free</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body wow fadeInUp" data-wow-delay="0.5s" >
                             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>10 users included</li>
@@ -175,11 +209,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
+                    <div class="card mb-4 box-shadow  wow pulse" >
+                        <div class="card-header  wow fadeInUp " data-wow-delay="0.5s">
                             <h4 class="my-0 font-weight-normal">Free</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body wow fadeInUp" data-wow-delay="0.5s" >
                             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>10 users included</li>
@@ -193,11 +227,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
+                    <div class="card mb-4 box-shadow  wow pulse" >
+                        <div class="card-header  wow fadeInUp " data-wow-delay="0.5s">
                             <h4 class="my-0 font-weight-normal">Free</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body wow fadeInUp" data-wow-delay="0.5s" >
                             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>10 users included</li>
@@ -252,7 +286,7 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn  btn-primary btn-primary-plain ">Submit</button>
                     </form>
                 </div>
             </div>
@@ -330,7 +364,7 @@
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn  btn-primary btn-primary-plain ">Submit</button>
                     </div>
                 </form>
             </div>
@@ -385,6 +419,19 @@
 
 
     <script src="js/bootstrap.min.js"></script>
+    <script src="wow/dist/wow.min.js"></script>
+    <!-- <script>
+        let wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 100,
+                callback: function (box) {
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                }
+            }
+        );
+        wow.init();
+    </script> -->
     <script src="js/main.js"></script>
 </body>
 

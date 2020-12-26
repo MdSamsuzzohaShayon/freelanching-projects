@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WOW</title>
+  <head>
+    <!-- <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+  </head>
+  <link rel="stylesheet" href="wow/css/libs/animate.css" />
+  <link rel="stylesheet" href="css/custom-bootstrap.css">
+  <style>
+
+  </style>
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <section class="wow slideInRight">Hello</section>
+  <script src="wow/dist/wow.min.js"></script>
+
+  <script>
+    let wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+
+  </script>
+</body>
+</html>

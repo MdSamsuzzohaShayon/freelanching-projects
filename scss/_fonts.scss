@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+// font-family: 'Peddana', serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap');
+// font-family: 'Fanwood Text', serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,400&display=swap');
+    // /* font-family: 'Source Serif Pro', serif; */
+
+
+
+
+@mixin font-styling ($fontName, $fontSize) {
+    font-family: $fontName;
+    font-size: $fontSize
+}

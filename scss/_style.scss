@@ -1,0 +1,137 @@
+@import "./fonts";
+
+
+body {
+    font-family: 'Fanwood Text', serif;
+}
+
+
+
+
+
+
+
+
+
+.video-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 85vh;
+    width: 100%;
+    object-fit: cover;
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+}
+
+.nav-over-video {
+    /* width: 90%;
+    margin-left: 5%; */
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+/* .navbar a {
+    color: white;
+} */
+
+.site-description {
+    margin-top: 10%;
+}
+
+.res-re {
+    margin-top: 25%;
+}
+
+.res-con {
+    width: 45%;
+}
+
+.two-img {
+    object-fit: cover;
+    height: 277px;
+}
+
+.sign-up {
+    background: rgb(215, 228, 255);
+}
+
+.faq-img {
+    width: 94%;
+    margin-left: 3%;
+    height: 94%;
+    margin-top: 3%;
+}
+
+.footer-bg {
+    color: white;
+    background: rgb(6, 25, 61);
+}
+
+.footer-bg a {
+    text-decoration: none;
+}
+
+
+/* ORDER PAGE  START */
+
+.pro-bar , .pro-bar-overlay{
+    margin-left: 10%;
+    border-width: thin;
+}
+
+.pro-bar {
+    border-top: 1px solid rgb(38, 156, 235);
+    width: 80%;
+}
+
+
+.pro-bar-overlay{
+   /* width: 16%; */  /* CHANGABLE */
+    border-top: 1px solid rgb(3, 49, 80);
+    margin-top: -6px;
+}
+
+.base-dot .dot{
+    width: 10px;
+    height: 10px;
+    margin-top: -6px;
+    background: blue;
+    cursor: pointer;
+}
+
+/* .dot-overlay .dot{
+    
+    width: 25%;
+    height: 2px;
+    margin-top: -6px;
+}
+.dot-overlay .dot-1{
+    background: yellow;
+    margin-top: -6px;
+} */
+
+
+
+.pro-bar-text{
+    cursor: pointer;
+    width: 84%;
+    margin-left: 8%;
+}
+
+
+/* ORDER PAGE ENDS  */
+
+
+/* FOR MOBILE DEVICE START  */
+
+@media(max-width: 768px) {
+    .res-re {
+        margin-top: 55%;
+    }
+}
+
+
+/* FOR MOBILE DEVICE ENDS  */
