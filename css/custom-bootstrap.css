@@ -2,9 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Peddana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Peddana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
 .dropdown-menu {
   font-family: "Peddana", serif;
   font-size: 1rem !important;
@@ -10652,6 +10658,7 @@ body {
 
 .h2 {
   color: #187aca;
+  font-family: "ZCOOL XiaoWei", serif;
 }
 
 .video-bg {
@@ -10727,7 +10734,7 @@ body {
 }
 
 .pro-bar {
-  border-top: 1px solid #269ceb;
+  border-top: 1px solid #e6e9f5;
   width: 80%;
 }
 
@@ -10742,7 +10749,8 @@ body {
   width: 10px;
   height: 10px;
   margin-top: -6px;
-  background: blue;
+  border-radius: 50%;
+  background: #1f3268;
   cursor: pointer;
 }
 
@@ -10760,6 +10768,10 @@ body {
   cursor: pointer;
   width: 84%;
   margin-left: 8%;
+}
+
+.second-part {
+  display: none;
 }
 
 /* ORDER PAGE ENDS  */
@@ -10787,6 +10799,10 @@ body {
 
   .m-input-phone {
     margin-top: 10%;
+  }
+
+  .dot-text {
+    font-size: 0.55rem;
   }
 }
 /* FOR MOBILE DEVICE ENDS  */

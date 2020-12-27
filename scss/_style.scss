@@ -11,6 +11,9 @@ body {
     color: rgb(24, 122, 202);
     // text-transform: uppercase;
     // text-shadow: 2px 2px rgb(204, 232, 255);
+    // font-family: 'Abril Fatface', cursive;
+    // font-family: 'Aclonica', sans-serif;
+    font-family: 'ZCOOL XiaoWei', serif;
 }
 
 
@@ -95,7 +98,7 @@ body {
 }
 
 .pro-bar {
-    border-top: 1px solid rgb(38, 156, 235);
+    border-top: 1px solid $border-color;
     width: 80%;
 }
 
@@ -110,7 +113,8 @@ body {
     width: 10px;
     height: 10px;
     margin-top: -6px;
-    background: blue;
+    border-radius: 50%;
+    background: $primary;
     cursor: pointer;
 }
 
@@ -133,8 +137,23 @@ body {
     margin-left: 8%;
 }
 
+.second-part{
+    display: none;
+}
+
 
 /* ORDER PAGE ENDS  */
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FOR MOBILE DEVICE START  */
@@ -155,8 +174,10 @@ body {
     .site-description {
         margin-top: 40%;
     }
-    // RESEDENTIAL REAL ESTATE 
 
+
+
+    // RESEDENTIAL REAL ESTATE 
     .res-re{
         margin-top: 120%;
     }
@@ -168,6 +189,12 @@ body {
     }
     .m-input-phone{
         margin-top: 10%;
+    }
+
+
+    // MAKE ORDER RESPONSIVE FOR MOBILE
+    .dot-text{
+        font-size: 0.55rem;
     }
 }
 

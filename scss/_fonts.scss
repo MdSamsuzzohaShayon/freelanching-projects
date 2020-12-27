@@ -11,6 +11,15 @@
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+// font-family: 'Abril Fatface', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+// font-family: 'Aclonica', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+// font-family: 'ZCOOL XiaoWei', serif;
+
 
 @mixin font-styling ($fontName, $fontSize) {
     font-family: $fontName;

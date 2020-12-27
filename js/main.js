@@ -3,6 +3,7 @@ const step = document.querySelectorAll(".step");
 const nextStep = document.querySelectorAll('.next-step');
 const proBarProgress = document.getElementById('pro-bar-progress');
 const dotText = document.querySelectorAll('.dot-text');
+const findLocation = document.getElementById('find-location');
 
 
 
@@ -81,19 +82,22 @@ function orderProcess() {
             e.preventDefault();
             console.log(dotText[currentStep]);
             clickable.push({ id: currentStep, isClickable: true });
-            progressPercentage += 16;
-            proBarProgress.style.width = progressPercentage.toString() + "%";
+
             console.log("Clicked element: " + e.target, "Index of step: " + nsI);
             if (currentStep >= nextStep.length - 1) {
                 console.log("You are completed with the process");
                 clickable = [];
             } else {
+                progressPercentage += 16;
+                proBarProgress.style.width = progressPercentage.toString() + "%";
                 step[currentStep].style.display = "none";
                 currentStep++;
                 step[currentStep].style.display = "block";
             }
             console.log("Clickable array: ", clickable);
         });
+
+
     });
 
 
@@ -131,14 +135,15 @@ function orderProcess() {
         });
     });
 
-    // dotText.forEach((dt, dtI)=>{
-    //     console.log("hello");
-    //     dt.addEventListener((e)=>{
-    //         e.preventDefault();
-    //         console.log("Dot text : ",dtI);
-    //         // if(clickable.id == )
-    //     });
-    // });
+
+
+
+
+    findLocation.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("Search find button hit");
+        document.getElementById('second-part').style.display = "block";
+    });
 }
 
 

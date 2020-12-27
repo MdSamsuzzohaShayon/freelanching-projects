@@ -16,24 +16,53 @@
 <body>
 
     <!-- NAVBAR START -->
-    <nav class="navbar py-3 nav-over-video navbar-dark bg-dark navbar-expand-lg ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <div class="d-flex">
+    <nav class="navbar py-3 py-4 text-uppercase navbar-expand-lg navbar-white bg-white shadow wow slideInDown"
+        data-wow-delay="0s">
+        <div class="container-fluid d-flex">
+            <div class="justify-content-start">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" height="50px" alt="" class="img">
+                </a>
+            </div>
+            <div class="justify-content-end">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-13z" />
+                            <path
+                                d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm10.823.323l-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">Industries</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">Solutions</a>
+                        </li>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">Pilots</a>
+                        </li>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link active" aria-current="page" href="#">Support</a>
+                        </li>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s">
+                            <a class="nav-link" href="#">Log in</a>
+                        </li>
+                        <li class="nav-item wow flipInX   data-wow-duration=" 1s" data-wow-delay="1s" dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
@@ -41,14 +70,12 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item wow flipInX " data-wow-duration="1s" data-wow-delay="1s"><button
+                                class="btn btn-primary">Become a client</button></li>
                     </ul>
-                    <button class="btn btn-primary">Become a client</button>
                 </div>
             </div>
         </div>
@@ -101,45 +128,51 @@
         <div class="order-step-info mt-5">
             <!-- PROPERTY INFO START  -->
             <div class="step step-1 property">
-                <h4 class="h4">Where Do You Want Us to Fly?</h4>
+                <h2 class="h2">Where Do You Want Us to Fly?</h2>
                 <form>
                     <label class="label">Address or Latitude / Longitude</label>
                     <div class="input-group mb-3">
 
                         <input type="text" class="form-control" placeholder="Enter Location"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-primary px-5" type="submit" id="button-addon2">Next</button>
+                            aria-label="Recipient's username" aria-describedby="find-location">
+                        <button class="btn btn-primary px-5" type="submit" id="find-location">Next</button>
                     </div>
                 </form>
                 <p class="muted">(e.g. 1234 Pico Blvd, Santa Monica, CA 90404; or 34.015096, -118.477445)</p>
-                <div class="row google-map">
-                    <div class="col-md-6">
-                        <div class="google-map-img">
-                            <img src="img/pexels-binyamin-mellish-106399.jpg" alt="" class="img-fluid">
+                <div class="google-map mt-5">
+                    <div class="second-part" id="second-part" >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="google-map-img">
+                                    <img src="img/pexels-binyamin-mellish-106399.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="h2">Dhaka, Dhaka Division</h2>
+                                <p>(23.810332, 90.4125181)</p>
+                            </div>
                         </div>
+                        <h2 class="h2 mt-5">A reference or claim number for your internal use?</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Reference ID (optional)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-primary px-5 next-step" type="submit">Next</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-md-6">
-                        <h4 class="h4">Dhaka, Dhaka Division</h4>
-                        <p>(23.810332, 90.4125181)</p>
-                    </div>
+
+
                 </div>
-                <br>
-                <h4 class="h4">A reference or claim number for your internal use?</h4>
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Reference ID (optional)</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-primary px-5 next-step" type="submit">Next</button>
-                    </div>
-                </form>
+
             </div>
             <!-- PROPERTY INFO ENDS  -->
 
             <!-- SELECT PACKAGE START  -->
             <div class="step select-package step-2">
-                <h4 class="h4">Select Your Package</h4>
+                <h2 class="h2">Select Your Package</h2>
                 <P>DroneBase selects the most applicable shot list based on the property type and chosen package.</P>
                 <!-- PACKAGE START  -->
                 <div class="package">
@@ -147,7 +180,7 @@
                         <div class="col-md-3">
                             <div class="card mb-4 box-shadow">
                                 <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                    <h2 class="my-0 font-weight-normal">Free</h2>
                                 </div>
                                 <div class="card-body">
                                     <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
@@ -158,7 +191,7 @@
                                         <li>Email support</li>
                                         <li>Help center access</li>
                                     </ul>
-                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                    <button type="button" class="btn btn-primary">Sign up
                                         for
                                         free</button>
                                 </div>
@@ -167,7 +200,7 @@
                         <div class="col-md-3">
                             <div class="card mb-4 box-shadow">
                                 <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                    <h2 class="my-0 font-weight-normal">Free</h2>
                                 </div>
                                 <div class="card-body">
                                     <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
@@ -178,7 +211,7 @@
                                         <li>Email support</li>
                                         <li>Help center access</li>
                                     </ul>
-                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                    <button type="button" class="btn btn-primary">Sign up
                                         for
                                         free</button>
                                 </div>
@@ -187,7 +220,7 @@
                         <div class="col-md-3">
                             <div class="card mb-4 box-shadow">
                                 <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                    <h2 class="my-0 font-weight-normal">Free</h2>
                                 </div>
                                 <div class="card-body">
                                     <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
@@ -198,7 +231,7 @@
                                         <li>Email support</li>
                                         <li>Help center access</li>
                                     </ul>
-                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                    <button type="button" class="btn btn-primary">Sign up
                                         for
                                         free</button>
                                 </div>
@@ -207,7 +240,7 @@
                         <div class="col-md-3">
                             <div class="card mb-4 box-shadow">
                                 <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">Free</h4>
+                                    <h2 class="my-0 font-weight-normal">Free</h2>
                                 </div>
                                 <div class="card-body">
                                     <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/
@@ -218,7 +251,7 @@
                                         <li>Email support</li>
                                         <li>Help center access</li>
                                     </ul>
-                                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up
+                                    <button type="button" class="btn btn-primary">Sign up
                                         for
                                         free</button>
                                 </div>
@@ -229,20 +262,21 @@
                 <!-- PACKAGE ENDS  -->
 
                 <br>
-                <h4 class="h4">Special Instructions</h4>
+                <h2 class="h2">Special Instructions</h2>
                 <p>Is there anything else you would like us to know for this order?</p>
                 <form>
                     <div class="input-group mb-3">
                         <textarea name="" id="" class="form-control" rows="2"></textarea>
                     </div>
-                    <button class="btn btn-primary next px-4" type="submit">Next</button>
+                    <!-- MODAL START  -->
                 </form>
 
-                <!-- MODAL START  -->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
+                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Next
                 </button>
+
+
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -250,7 +284,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Create an account</h5>
+                                <h2 class="modal-title h2" id="exampleModalLabel">Create an account</h2>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -278,7 +312,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary next-step" data-bs-dismiss="modal" >Save changes</button>
+                                <button type="button" class="btn btn-primary next-step" data-bs-dismiss="modal">Save
+                                    changes</button>
                             </div>
                         </div>
                     </div>
@@ -290,7 +325,7 @@
 
             <!-- SITE DETAILS START  -->
             <div class="step site-details step-3">
-                <h4 class="h4">Tell us where you want us to fly on the map.</h4>
+                <h2 class="h2">Tell us where you want us to fly on the map.</h2>
                 <p>Drag the corners of the Property Area box to completely surround an individual building. This shows
                     the pilot exactly which building or a plot of land to shoot. To add another property area simply
                     click at the Property Area tool again.</p>
@@ -310,7 +345,7 @@
 
                 <form action="">
                     <div class="weather-pref">
-                        <h4 class="h4">Do you have a weather preference?</h4>
+                        <h2 class="h2">Do you have a weather preference?</h2>
                         <p>Please note that your weather preference may affect scheduled dates and turnaround time.</p>
                         <br>
                         <div class="form-check">
@@ -336,7 +371,7 @@
                         </div>
                     </div>
                     <div class="shedule-set">
-                        <h4 class="h4">On-site Contact</h4>
+                        <h2 class="h2">On-site Contact</h2>
                         <p>Please note that your weather preference may affect scheduled dates and turnaround time.</p>
                         <br>
                         <div class="form-check">
@@ -370,7 +405,7 @@
 
             <!-- PAYMENTS START  -->
             <div class="step step-5 payments">
-                <h4 class="h4">Payments</h4>
+                <h2 class="h2">Payments</h2>
                 <button class="btn btn-primary next-step px-5">Next</button>
             </div>
             <!-- PAYMENTS ENDS  -->
@@ -378,7 +413,7 @@
 
             <!-- SUMMARY START  -->
             <div class="step step-6 Summary">
-                <h4 class="h4">Summary</h4>
+                <h2 class="h2">Summary</h2>
                 <button class="btn btn-primary next-step px-5" type="submit">Next</button>
             </div>
             <!-- SUMMARY ENDS  -->
