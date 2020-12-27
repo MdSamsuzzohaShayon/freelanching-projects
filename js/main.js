@@ -1,19 +1,34 @@
+// ORDER START 
+const step = document.querySelectorAll(".step");
+const nextStep = document.querySelectorAll('.next-step');
+const proBarProgress = document.getElementById('pro-bar-progress');
+const dotText = document.querySelectorAll('.dot-text');
+
+
+
+
+let currentStep = 0;
+let progressPercentage = 0;
+let clickable = [];
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
     initilizeWOW();
 });
 
+
 console.log(window.location.pathname);
 // JAVASCRIPT FOR INDEX PAGE 
 if (window.location.href == '/index.html') {
     console.log("this is index page");
-    // initilizeWOW();
+    initilizeWOW();
 }
 
 // JAVASCRIPT FOR ORDER PAGE 
 if (window.location.href == '/order.html') {
     console.log("this is order page");
-    // initilizeWOW();
+    initilizeWOW();
     orderProcess();
 
 }
@@ -43,18 +58,7 @@ function initilizeWOW() {
 
 
 
-// ORDER START 
-const step = document.querySelectorAll(".step");
-const nextStep = document.querySelectorAll('.next-step');
-const proBarProgress = document.getElementById('pro-bar-progress');
-const dotText = document.querySelectorAll('.dot-text');
 
-
-
-
-let currentStep = 0;
-let progressPercentage = 0;
-let clickable = [];
 
 
 
@@ -140,7 +144,7 @@ function orderProcess() {
 
 
 
-
+orderProcess();
 
 
 

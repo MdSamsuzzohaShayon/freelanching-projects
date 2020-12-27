@@ -7,7 +7,11 @@ body {
 
 
 
-
+.h2{
+    color: rgb(24, 122, 202);
+    // text-transform: uppercase;
+    // text-shadow: 2px 2px rgb(204, 232, 255);
+}
 
 
 
@@ -38,11 +42,14 @@ body {
 } */
 
 .site-description {
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
+
+
+// RESEDENTIAL REAL ESTATE 
 .res-re {
-    margin-top: 25%;
+    margin-top: 18%;
 }
 
 .res-con {
@@ -55,7 +62,12 @@ body {
 }
 
 .sign-up {
-    background: rgb(215, 228, 255);
+    background: rgb(242, 239, 250);
+}
+.signup-img{
+    height: 314px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .faq-img {
@@ -127,9 +139,35 @@ body {
 
 /* FOR MOBILE DEVICE START  */
 
-@media(max-width: 768px) {
-    .res-re {
-        margin-top: 55%;
+// TABLET 
+// @media(max-width: 768px) {
+//     // .res-re {
+//     //     margin-top: 55%;
+//     // }
+// }
+
+
+// IPHONE X LARGE DEVICE
+@media(max-width: 768px){
+    .video-bg {
+        height: 100vh;
+    }
+    .site-description {
+        margin-top: 40%;
+    }
+    // RESEDENTIAL REAL ESTATE 
+
+    .res-re{
+        margin-top: 120%;
+    }
+    .res-con {
+        width: 95%;
+    }
+    .ig-phone-size{
+        margin: 10px 0;
+    }
+    .m-input-phone{
+        margin-top: 10%;
     }
 }
 

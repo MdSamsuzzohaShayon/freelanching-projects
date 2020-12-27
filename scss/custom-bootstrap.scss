@@ -1,22 +1,44 @@
 @import "./fonts";
 
+
+// MY VARIABLES 
+$border-radius : 0;
+$border-color: rgb(230, 233, 245);
+
 // VARIABLE OVERRIDE 
-$btn-border-radius: 0;
+$btn-border-radius: $border-radius;
 $btn-border-width: none;
 $btn-padding-y: 0.8rem;
 $btn-padding-x: 3rem;
+$btn-font-size:  1.2rem;
 
 
 $primary: rgb(31, 50, 104);
 
 
-$dropdown-border-radius: 0;
+$dropdown-border-radius: $border-radius;
 $dropdown-border-width: 0.05em;
-$dropdown-border-color: rgb(177, 177, 255);
+$dropdown-border-color: $border-color;
 
 
 $input-bg: rgb(188, 203, 243) !default;
 $input-border-radius: 0;
+$input-btn-focus-box-shadow: none;
+// $input-btn-focus-width: 0;
+
+
+
+$card-border-radius: $border-radius;
+$card-border-color:  $border-color;
+$card-cap-bg:  $border-color !default;
+// .card-body{
+//   li{
+//     border: 1px solid $border-color;
+//     padding: 10px;
+//     margin: 5px;
+//   }
+// }
+
 
 
 
@@ -56,19 +78,11 @@ $input-border-radius: 0;
     border: none !important;
     
   
-    // Customize the `:focus` state to imitate native WebKit styles.
-    &:focus {
-    //   background-color: $input-focus-bg;
-    //   border-color: $input-focus-border-color;
-      outline: 0 !important;
-    }
+
   
   }
 
-  input[type="submit"]:focus {
-    outline: none !important;
-    background-color: rgb(208, 192, 74);
-}
+
 
 
 
