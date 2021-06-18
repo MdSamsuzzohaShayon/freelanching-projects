@@ -39,10 +39,7 @@ let data = [
         React processes only user interface in applications and can be used in combination with other JavaScript libraries
         or 2019s such as Redux, Flux, Backbone...
     `
-    }, /*{
-    cat: 2019, name: 'SenchaTouch', value: 10,
-    icon: '',
-},*/ {
+    }, {
         cat: 2021, name: 'Atom', value: 10,
         icon: 'img/atom.png',
         desc: `
@@ -167,14 +164,8 @@ const pack = d3.pack()
 
 
 function redraw(selectedData) {
-
-    // transition
-    // const t = d3.transition()
-    //     .duration(750);
-
-    // hierarchy
     const h = d3.hierarchy({ children: selectedData })
-        .sum(d=>d.value)
+        .sum(d => d.value)
 
     //JOIN
     const circle = svg.selectAll("circle")
@@ -186,27 +177,13 @@ function redraw(selectedData) {
     //EXIT
     circle.exit()
         .style("fill", "#b26745")
-        // .transition(t)
         .attr("r", 1e-6)
         .remove();
 
     text.exit()
-        // .transition(t)
         .attr("opacity", 1e-6)
         .remove();
 
-    // //UPDATE
-    // circle
-    //     .transition(t)
-    //     .style("fill", "#3a403d")
-    //     .attr("r", function (d) { return d.r })
-    //     .attr("cx", function (d) { return d.x; })
-    //     .attr("cy", function (d) { return d.y; })
-
-    // text
-    //     .transition(t)
-    //     .attr("x", function (d) { return d.x; })
-    //     .attr("y", function (d) { return d.y; });
 
     // //ENTER
     circle.enter().append("circle")
@@ -214,16 +191,14 @@ function redraw(selectedData) {
         .attr("cx", function (d) { return d.x; })
         .attr("cy", function (d) { return d.y; })
         .style("fill", "#fff")
-        // .transition(t)
         .style("fill", "#45b29d")
         .attr("r", function (d) { return d.r });
 
     text.enter().append("text")
         .attr("opacity", 1e-6)
-        .attr("x", d=>d.x)
-        .attr("y", d=>d.y)
-        .text(d=>d.data.name)
-        // .transition(t)
+        .attr("x", d => d.x)
+        .attr("y", d => d.y)
+        .text(d => d.data.name)
         .attr("opacity", 1);
 }
 

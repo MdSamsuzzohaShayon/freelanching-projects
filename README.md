@@ -19,3 +19,6 @@
     .html(d => d.desc)
     d3.event.stopPropagation()
 ```
+
+
+ - Group is not deleting properly 
