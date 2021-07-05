@@ -155,7 +155,7 @@ const data = [
         desc: `
             Visual Studio Code is a cross-2018 source code editor developed by Microsoft.
             It includes support for debugging, embedded Git control, syntax highlighting,
-            intelligent code completion, snippets, and code refactoring. Its extensions eco system is
+            intelligent code compconstion, snippets, and code refactoring. Its extensions eco system is
             growing quickly and it is becoming the best Front End editors out there.
         `
     }, {
@@ -275,8 +275,8 @@ const data = [
         cat: 2018, name: 'ReactNative', value: 10,
         icon: 'img/reactnative.png',
         desc: `
-            React Native lets you build mobile apps using only JavaScript.
-            It uses the same design as React, letting us compose a rich
+            React Native consts you build mobile apps using only JavaScript.
+            It uses the same design as React, constting us compose a rich
             mobile UI from declarative components.
         `
     }, {
@@ -481,17 +481,18 @@ const data = [
     }];
 
 
-let svg = d3.select('svg');
-let width = document.body.clientWidth; // get width in pixels
-let height = +svg.attr('height');
-let centerX = width * 0.5;
-let centerY = height * 0.5;
-let strength = 0.05;
+const svg = d3.select('svg');
+const width = document.body.clientWidth; // get width in pixels
+const height = +svg.attr('height');
+const centerX = width * 0.5; // WHOLE GRAPH POSITION 
+const centerY = height * 0.5; // WHOLE GRAPH POSITION
+const strengthX = 0.01;
+const strengthY = 0.03;
 let focusedNode;
 
-let format = d3.format(',d');
+const format = d3.format(',d');
 
-let scaleColor = d3.scaleOrdinal(d3.schemeCategory10);
+const scaleColor = d3.scaleOrdinal(d3.schemeCategory10);
 
 
 
@@ -499,20 +500,20 @@ let scaleColor = d3.scaleOrdinal(d3.schemeCategory10);
 function render(selection, selectedData) {
 
     // use pack to calculate radius of the circle
-    let pack = d3.pack()
+    const pack = d3.pack()
         .size([width, height])
         .padding(1.5);
 
-    let forceCollide = d3.forceCollide(d => d.r + 1);
+    const forceCollide = d3.forceCollide(d => d.r + 1);
 
     // use the force
-    let simulation = d3.forceSimulation()
+    const simulation = d3.forceSimulation()
         // .force('link', d3.forceLink().id(d => d.id))
         .force('charge', d3.forceManyBody())
-        .force('collide', forceCollide)
+        // .force('collide', forceCollide)
         // .force('center', d3.forceCenter(centerX, centerY))
-        .force('x', d3.forceX(centerX).strength(strength))
-        .force('y', d3.forceY(centerY).strength(strength));
+        .force('x', d3.forceX(centerX).strength(strengthX))
+        .force('y', d3.forceY(centerY).strength(strengthY));
 
     // reduce number of circles on mobile screen due to slow computation
     if ('matchMedia' in window && window.matchMedia('(max-device-width: 767px)').matches) {
@@ -521,12 +522,12 @@ function render(selection, selectedData) {
         });
     }
 
-    let root = d3.hierarchy({ children: selectedData })
+    const root = d3.hierarchy({ children: selectedData })
         .sum(d => d.value);
 
     // we use pack() to automatically calculate radius conveniently only
     // and get only the leaves
-    let nodes = pack(root).leaves().map(node => {
+    const nodes = pack(root).leaves().map(node => {
 
         const data = node.data;
         return {
@@ -563,7 +564,7 @@ function render(selection, selectedData) {
     //     .enter()
     //     .append();
 
-    let node = group.enter().append('g')
+    const node = group.enter().append('g')
         //    .filter(function(d) { return d.value > 50  })
         //	.filter(function(d) { return (d.value > 20 && d.value<50) })
         // .filter(function (d) { return d.cat > 2016 })
@@ -593,7 +594,7 @@ function render(selection, selectedData) {
         .style('fill', d => scaleColor(d.cat))
         .transition().duration(2000).ease(d3.easeElasticOut)
         .tween('circleIn', (d) => {
-            let i = d3.interpolateNumber(0, d.radius);
+            const i = d3.interpolateNumber(0, d.radius);
             return (t) => {
                 d.r = i(t);
                 simulation.force('collide', forceCollide);
@@ -632,30 +633,30 @@ function render(selection, selectedData) {
     node.append('title')
         .text(d => (d.cat + '::' + d.name + '\n' + format(d.value)));
 
-    let legendOrdinal = d3.legendColor()
+    const legendOrdinal = d3.legendColor()
         .scale(scaleColor)
         .shape('circle');
 
 
-    let legend = svg.append('g')
+    const legend = svg.append('g')
         .classed('legend-color', true)
         .attr('text-anchor', 'start')
         .attr('transform', 'translate(20,30)')
         .style('font-size', '12px')
         .call(legendOrdinal);
 
-    let sizeScale = d3.scaleOrdinal()
+    const sizeScale = d3.scaleOrdinal()
         .domain(['less use', 'more use'])
         .range([5, 10]);
 
-    let legendSize = d3.legendSize()
+    const legendSize = d3.legendSize()
         .scale(sizeScale)
         .shape('circle')
         .shapePadding(10)
         .labelAlign('end');
 
 
-    let infoBox = node.append('foreignObject')
+    const infoBox = node.append('foreignObject')
         .classed('circle-overlay hidden', true)
         .attr('x', -350 * 0.5 * 0.8)
         .attr('y', -350 * 0.5 * 0.8)
@@ -676,13 +677,13 @@ function render(selection, selectedData) {
     node.on('click', (currentNode) => {
         d3.event.stopPropagation();
         console.log('currentNode', currentNode);
-        let currentTarget = d3.event.currentTarget; // the <g> el
+        const currentTarget = d3.event.currentTarget; // the <g> el
 
         if (currentNode === focusedNode) {
             // no focusedNode or same focused node is clicked
             return;
         }
-        let lastNode = focusedNode;
+        const lastNode = focusedNode;
         focusedNode = currentNode;
 
         simulation.alphaTarget(0.2).restart();
@@ -697,7 +698,7 @@ function render(selection, selectedData) {
             node.filter((d, i) => i === lastNode.index)
                 .transition().duration(2000).ease(d3.easePolyOut)
                 .tween('circleOut', () => {
-                    let irl = d3.interpolateNumber(lastNode.r, lastNode.radius);
+                    const irl = d3.interpolateNumber(lastNode.r, lastNode.radius);
                     return (t) => {
                         lastNode.r = irl(t);
                     }
@@ -712,9 +713,9 @@ function render(selection, selectedData) {
         d3.transition().duration(2000).ease(d3.easePolyOut)
             .tween('moveIn', () => {
                 console.log('tweenMoveIn', currentNode);
-                let ix = d3.interpolateNumber(currentNode.x, centerX);
-                let iy = d3.interpolateNumber(currentNode.y, centerY);
-                let ir = d3.interpolateNumber(currentNode.r, centerY * 0.5);
+                const ix = d3.interpolateNumber(currentNode.x, centerX);
+                const iy = d3.interpolateNumber(currentNode.y, centerY);
+                const ir = d3.interpolateNumber(currentNode.r, centerY * 0.5);
                 return function (t) {
                     // console.log('i', ix(t), iy(t));
                     currentNode.fx = ix(t);
@@ -725,7 +726,7 @@ function render(selection, selectedData) {
             })
             .on('end', () => {
                 simulation.alphaTarget(0);
-                let $currentGroup = d3.select(currentTarget);
+                const $currentGroup = d3.select(currentTarget);
                 $currentGroup.select('.circle-overlay')
                     .classed('hidden', false);
                 $currentGroup.select('.node-icon')
@@ -743,7 +744,7 @@ function render(selection, selectedData) {
 
     // blur
     d3.select(document).on('click', () => {
-        let target = d3.event.target;
+        const target = d3.event.target;
         // check if click on document but not on the circle overlay
         if (!target.closest('#circle-overlay') && focusedNode) {
             focusedNode.fx = null;
@@ -752,7 +753,7 @@ function render(selection, selectedData) {
             d3.transition().duration(2000).ease(d3.easePolyOut)
                 .tween('moveOut', function () {
                     console.log('tweenMoveOut', focusedNode);
-                    let ir = d3.interpolateNumber(focusedNode.r, focusedNode.radius);
+                    const ir = d3.interpolateNumber(focusedNode.r, focusedNode.radius);
                     return function (t) {
                         focusedNode.r = ir(t);
                         simulation.force('collide', forceCollide);
@@ -777,15 +778,15 @@ function render(selection, selectedData) {
                 grp = this.value;
                 if (cb.property("checked")) {
                     //	svg.filter(function(d) { return d.cat=this.value })	   
-                    // svg.selectAll("."+grp).transition().duration(1000).style("opacity", 1).attr("r", function(d){ return size(d.size) })
+                    // svg.selectAll("."+grp).transition().duration(2000).style("opacity", 1).attr("r", function(d){ return size(d.size) })
                     var boxes = d3.selectAll("input.checkbox:checked");
                     console.log(this.value)
-                    let node = svg.selectAll('.node')
+                    const node = svg.selectAll('.node')
                         .data(nodes)
                         .enter().append('g')
                         .filter(function (d) { return d.cat > 2012 })
                     // .filter(function(d) { return d.cat = this.value  })						
-                    //	let node = svg.selectAll('.node')
+                    //	const node = svg.selectAll('.node')
                     //  	    .data(nodes)
                     //    .enter().append('g')				
                     //  .filter(function(d) { return d.cat=this.value })
@@ -799,7 +800,7 @@ function render(selection, selectedData) {
 
     function ticked() {
         node
-            .attr('transform', d => `translate(${d.x},${d.y})`)
+            .attr('transform', d => `translate(${d.x},${d.y })`)
             .select('circle')
             .attr('r', d => d.r);
     }
